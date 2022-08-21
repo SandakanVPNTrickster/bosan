@@ -37,7 +37,5 @@ echo -e "${green}═════════════════════
 echo -e "                         Premium VPS by @SandakanVPN"
 echo -e "${green}════════════════════════════════════════════════════════════${NC}"
 echo -e   ""
-clear
-       cat /etc/log-create-user.log
        read -n 1 -s -r -p "Press any key to back on menu"
        menu
