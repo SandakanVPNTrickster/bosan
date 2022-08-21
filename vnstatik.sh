@@ -13,7 +13,7 @@ ORANGE='\033[0;36m'
 cyan='\e[36m'
 NC='\e[0m'
 
-MYIP=$(curl -s https://icanhazip.com);
+MYIP=$(curl -sS ipv4.icanhazip.com)
 
 dtoday="$(vnstat -i eth0 | grep "today" | awk '{print $2" "substr ($3, 1, 1)}')"
 utoday="$(vnstat -i eth0 | grep "today" | awk '{print $5" "substr ($6, 1, 1)}')"
