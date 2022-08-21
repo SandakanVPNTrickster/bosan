@@ -30,9 +30,9 @@ tmon="$(vnstat -i eth0 -m | grep "`date +"%b '%y"`" | awk '{print $9" "substr ($
 
 echo -e "${green}════════════════════════════════════════════════════════════${NC}"
 echo -e "\e[36m Traffic        Today     Yesterday     Month"
-echo -e "\e[36m Download    $dtoday     $dyest       $dmon"
-echo -e "\e[36m Upload         $utoday     $uyest       $umon"
-echo -e "\e[36m Total           $ttoday    $tyest       $tmon"
+echo -e "\e[36m Download       $dtoday    $dyest       $dmon"
+echo -e "\e[36m Upload         $utoday    $uyest       $umon"
+echo -e "\e[36m Total          $ttoday    $tyest       $tmon"
 echo -e "${green}════════════════════════════════════════════════════════════${NC}"
 echo -e "                         Premium VPS by @SandakanVPN"
 echo -e "${green}════════════════════════════════════════════════════════════${NC}"
