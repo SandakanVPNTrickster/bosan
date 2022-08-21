@@ -13,6 +13,7 @@ ORANGE='\033[0;36m'
 cyan='\e[36m'
 NC='\e[0m'
 
+
 MYIP=$(curl -sS ipv4.icanhazip.com)
 
 dtoday="$(vnstat -i eth0 | grep "today" | awk '{print $2" "substr ($3, 1, 1)}')"
@@ -29,10 +30,22 @@ tmon="$(vnstat -i eth0 -m | grep "`date +"%b '%y"`" | awk '{print $9" "substr ($
 
 
 echo -e "${green}════════════════════════════════════════════════════════════${NC}"
-echo -e "\e[36m Traffic        Today     Yesterday     Month"
-echo -e "\e[36m Download       $dtoday    $dyest       $dmon"
-echo -e "\e[36m Upload         $utoday    $uyest       $umon"
-echo -e "\e[36m Total          $ttoday    $tyest       $tmon"
+echo -e "\e[36m Traffic            Today"
+echo -e "\e[36m Download          $dtoday"
+echo -e "\e[36m Upload             $utoday"
+echo -e "${green}════════════════════════════════════════════════════════════${NC}"
+echo -e "\e[36m Traffic            Yesterday"
+echo -e "\e[36m Download           $dyest"
+echo -e "\e[36m Upload              $uyest"
+echo -e "${green}════════════════════════════════════════════════════════════${NC}"
+echo -e "\e[36m Traffic            Month"
+echo -e "\e[36m Download          $dmon"
+echo -e "\e[36m Upload             $umon"
+echo -e "${green}════════════════════════════════════════════════════════════${NC}"
+echo -e "\e[36m Total"
+echo -e "\e[36m Today             $ttoday"
+echo -e "\e[36m Yesterday         $tyest"
+echo -e "\e[36m Month            $tmon"
 echo -e "${green}════════════════════════════════════════════════════════════${NC}"
 echo -e "                         Premium VPS by @SandakanVPN"
 echo -e "${green}════════════════════════════════════════════════════════════${NC}"
